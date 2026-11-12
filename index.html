@@ -147,6 +147,7 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.88rem;border-top:1px so
     <a class="site-name" href="#top">Khongorzul (Hojo) Duurenbileg <span>P.Eng</span></a>
     <nav class="site-nav" aria-label="Sections">
       <a href="#paper">Paper</a>
+      <a href="#research">Research</a>
       <a href="#code">Code</a>
       <a href="#about">About</a>
     </nav>
@@ -250,6 +251,20 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.88rem;border-top:1px so
           <button class="copy" id="copy" type="button">Copy</button>
         </div>
       </details>
+    </section>
+
+    <section id="research">
+      <h2>More research</h2>
+      <ul class="projects">
+        <li>
+          <h3>Multi-GPU modelling of sound propagation in the brain</h3>
+          <p class="tech">Research assistant, NeuroFUS Lab, Hotchkiss Brain Institute, University of Calgary. Summer 2018.</p>
+          <p>The lab models focused ultrasound travelling through the skull with a staggered-grid finite-difference solution of the viscoelastic wave equation, already running on one GPU. My task was to split it across several GPUs so the model could cover the whole cranium.</p>
+          <p>I learned CUDA and GPU architecture, ran jobs on Compute Canada's Cedar cluster with Slurm and nvprof, and tested unified memory, which made the code simpler but the solver much slower. I then built a structure that partitions the 3D grid across GPUs with asynchronous streams. It ran correctly on one GPU but hit memory access errors on two or more, and the multi-GPU version wasn't finished within the term. My report documents the approach and what to fix next.</p>
+          <p class="tech">CUDA, C++, Slurm, Compute Canada</p>
+          <div class="links"><span class="soon">Report available on request</span></div>
+        </li>
+      </ul>
     </section>
 
     <section id="code">
