@@ -257,6 +257,36 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.88rem;border-top:1px so
       <p class="prose">Projects from my degree, with source code.</p>
       <ul class="projects">
         <li>
+          <h3>Direct vs indirect georeferencing of aerial imagery</h3>
+          <p>Reconstructs ground coordinates from six aerial images four ways, from bundle adjustment with ground control to stereo intersection from GPS/INS alone. With good calibration, GPS/INS alone came within 0.16 m horizontally; a 0.05 mm camera calibration bias pushed its vertical error to about 5 m.</p>
+          <p class="tech">C++, Eigen. Lens distortion correction, least squares, collinearity intersection</p>
+          <div class="links"><a href="https://github.com/hojo-duurenbileg/aerial-photogrammetry-georeferencing">Code</a></div>
+        </li>
+        <li>
+          <h3>Range-based positioning with least squares and Kalman filtering</h3>
+          <p>Estimates a receiver's 2D position from ranges to four anchors with five estimators. A constant-velocity Kalman filter tracks the moving path and its speed, where a position-only filter overshoots the corner by more than 25 m.</p>
+          <p class="tech">MATLAB. Batch, sequential and summation-of-normals least squares, Kalman filter</p>
+          <div class="links"><a href="https://github.com/hojo-duurenbileg/range-positioning-kalman">Code</a></div>
+        </li>
+        <li>
+          <h3>Geodetic network adjustment</h3>
+          <p>Least-squares adjustment of a 2D survey network from angles and distances, with covariance propagation and error ellipses.</p>
+          <p class="tech">C++, Eigen</p>
+          <div class="links"><a href="https://github.com/hojo-duurenbileg/geodetic-network-adjustment">Code</a></div>
+        </li>
+        <li>
+          <h3>Wi-Fi signal strength for indoor location</h3>
+          <p>Parses Wi-Fi scans from five indoor locations and compares access point fingerprints. Floors and spots 15 to 20 m apart were told apart by which access points were seen and how strongly.</p>
+          <p class="tech">C++. Embedded data collection on an ARM mbed board</p>
+          <div class="links"><a href="https://github.com/hojo-duurenbileg/wifi-rss-indoor-location">Code</a></div>
+        </li>
+        <li>
+          <h3>Kalman filter estimate of gravity</h3>
+          <p>Estimates gravity from falling-mass position data with two dynamic models and flags outliers from the innovation sequence.</p>
+          <p class="tech">MATLAB</p>
+          <div class="links"><a href="https://github.com/hojo-duurenbileg/kalman-filter-gravity">Code</a></div>
+        </li>
+        <li>
           <h3>Automated LiDAR classification of power transmission lines</h3>
           <p>Capstone project. Classifies airborne LiDAR points along transmission corridors automatically.</p>
           <p class="tech">C++</p>
@@ -283,9 +313,7 @@ footer{padding:36px 0 48px;color:var(--muted);font-size:.88rem;border-top:1px so
         <p>I'm a geomatics engineer (P.Eng) in Calgary. For six years I've worked with airborne LiDAR, cameras and GNSS/IMU, from sensor installation and calibration to processed point clouds. My training is in estimation: least squares, Kalman filtering and GNSS/INS integration. I'm moving toward building the algorithms that turn raw sensor data into 3D.</p>
         <div class="about-links">
           <a href="https://www.linkedin.com/in/hojo-duurenbileg">LinkedIn</a>
-          <a href="mailto:hojoduurenbileg@gmail.com">Email</a>
-          <a href="files/resume.pdf">Résumé (PDF)</a>
-        </div>
+          <a href="mailto:hojoduurenbileg@gmail.com">Email</a>        </div>
       </div>
     </section>
   </main>
